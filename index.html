@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Turn Factory</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="stage"><canvas id="c"></canvas><div id="hint">Left-click: place &nbsp;|&nbsp; Right-click: remove &nbsp;|&nbsp; R: rotate &nbsp;|&nbsp; Space: next turn &nbsp;|&nbsp; Middle/Shift-drag or WASD: pan &nbsp;|&nbsp; Wheel: zoom</div></div>
+  <aside>
+    <h1>Turn Factory</h1>
+    <section>
+      <div class="row"><span>Turn <b id="turn">0</b></span><span><b id="regcount">1</b>/25 regions</span></div>
+      <div class="row">
+        <button id="next" class="primary">Next Turn (Space)</button>
+      </div>
+      <div class="row">
+        <button id="auto">Auto: Off (P)</button>
+        <select id="speed"><option value="800">1x</option><option value="400">2x</option><option value="160">5x</option><option value="60">Max</option></select>
+      </div>
+    </section>
+    <section><h2>Inventory</h2><div id="inv"></div></section>
+    <section><h2>Build</h2><div id="palette"></div><div class="small">Rotation: <b id="rot">&rarr;</b></div></section>
+    <section><h2>Inspector</h2><div id="info" class="small">Hover a tile.</div></section>
+    <section><h2>Region</h2><div id="region" class="small">Click a locked region to see its unlock cost.</div></section>
+    <section><h2>Log</h2><div id="log" class="small"></div></section>
+    <section><button id="reset" class="danger">New game</button></section>
+  </aside>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
